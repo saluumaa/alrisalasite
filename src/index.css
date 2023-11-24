@@ -13,7 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'poppins', sans-serif;
   /* background: #489EDE; */
-  background: #fff;
+  background: #000;
   overflow-y: scroll;
 }
 

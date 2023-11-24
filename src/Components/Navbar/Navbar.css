@@ -8,8 +8,7 @@ nav {
     width: 50%;
     top: -100%;
     left: 0;
-    /* background-color: #489EDE;  */
-    background-color: #000;
+    /* background-color: #000; */
     color: #489EDE;
     cursor: pointer;
     font-weight: 500;
