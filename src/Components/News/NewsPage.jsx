@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { GlobalContext } from '../Context/GlobalState';
 import { Carousel } from 'react-bootstrap';
+import line from '../Assets/line.png'
 import './News.css'; 
 
 const NewsPage = () => {
@@ -20,6 +21,15 @@ const NewsPage = () => {
   }, [news]);
 
   return (
+    <>
+    <div className='news-header'>
+      <div className='news-header-img'>
+        <img src={line} alt='line' /> 
+      </div>
+      <div className='news-header-text'>
+      <h1> Our Latest Programmes</h1>
+      </div>
+    </div>
     <div className='news-container'>
       <Carousel activeIndex={index} onSelect={handleSelect} className='carousel' >
         {news.map((item) => (
@@ -29,7 +39,7 @@ const NewsPage = () => {
               <h3>{item.title}</h3>
               <p>{item.description.slice(0, 100)}</p>
               <p>
-                <Link to={`/news/${item.id}`}>Read more</Link>
+                <Link to={`/news/${item.id}`}><button>Read more</button></Link>
               </p>
               <p>{item.date}</p>
             </Carousel.Caption>
@@ -37,6 +47,7 @@ const NewsPage = () => {
         ))}
       </Carousel>
     </div>
+    </>
   );
 };
 

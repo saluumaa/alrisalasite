@@ -1,33 +1,64 @@
-import React, {useContext} from 'react'
-import {useParams} from 'react-router-dom'
-import { GlobalContext } from '../Context/GlobalState'
-import './News.css'
+import React, { useContext, useState, useEffect } from 'react';
+import { GlobalContext } from '../Context/GlobalState';
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const News = () => {
-    const {news} = useContext(GlobalContext);
-    const {id} = useParams();
-    const newsItem = news.find(news => news.id === parseInt(id));
+const News = ({loggedIn }) => {
+  const { news } = useContext(GlobalContext);
+  const [index, setIndex] = useState(0);
 
+  const { deleteNews } = useContext(GlobalContext);
+  const nextImage = () => {
+    setIndex((prevIndex) => (prevIndex + 1) % news[index].image.length);
+  };
 
-    if(!newsItem){
-        return <div className='not-found'>
-            <h3>News not found</h3>
-        </div>
-    }
+  useEffect(() => {
+    const interval = setInterval(nextImage, 3000);
+    return () => clearInterval(interval);
+  }, [index]);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    beforeChange: (current, next) => setIndex(next),
+  };
+
   return (
+   
     <div className='news-page'>
-        <div className='news-image'>
-            {newsItem.image.length > 0 && newsItem.image.map((img, index) => (
+      {loggedIn && (
+        <div className='add-delete-btn'>
+       <Link to='/addnews'><button>Add News</button></Link>   
+          <button onClick={() => deleteNews(news.id)}>Delete News</button>
+        </div>
+        )}
+     {news.map((item) => (
+       <>
+        <div key={item.id} className='slider' >
+          <Slider {...settings}>
+            {item.image.length > 0 &&
+              item.image.map((img, index) => (
                 <img key={index} src={img} alt='news' />
-            ))}
-        </div>
-        <div className='news-content'>
-            <h3>{newsItem.title}</h3>
-            <p>{newsItem.description}</p>
-            <p>{newsItem.date}</p>
-        </div>
+              ))}
+          </Slider>
+          </div>
+            <div className='news-content'>
+              <h1>{item.title}</h1>
+              <p>{item.description}</p>
+              <p>{item.date}</p>
+            </div>
+             </>
+        ))}
     </div>
-  )
-}
+   
+  );
+};
 
-export default News
+export default News;
