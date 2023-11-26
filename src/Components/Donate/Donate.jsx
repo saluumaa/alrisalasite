@@ -6,7 +6,7 @@ const Donate = () => {
 
         <div className='donate-wrapper'>
             <div className='donate-content one'>
-                <h2>Affected Over</h2>
+                <h2>Changed Over</h2>
                 <hr />
                 <span>1000</span>
                 <p>

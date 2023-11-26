@@ -1,0 +1,133 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+
+}
+
+.contact-main {
+    height: 40vh;
+    background: url('../Assets/contact_us.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.contact-main h1 {
+    flex: 1;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+
+}
+
+.contact-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 15px 0;
+}
+
+.contact-content {
+    margin-top: 30px;
+}
+
+.contact-content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #898EDE;
+}
+
+.contact-content p{
+    font-size: 1.3rem;
+    margin-top: -5px;
+}
+
+.contact-content-form p {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #898EDE;
+    max-width: 70%;
+    margin:10px  auto;
+}
+
+.contact-content-form form {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+}
+
+
+.contact-content-form form input, textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #898EDE;
+    outline: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.contact-content-form form input:focus, textarea:focus {
+    border: 1px solid #898EDE;
+    box-shadow: 1px 2px 6px rgb(235, 255, 81);
+}
+
+.contact-content-form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #898EDE;
+    outline: none;
+    width: 100%;
+    background-color: #898EDE;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-main {
+        height: 50vh;
+    }
+
+    .contact-content-container {
+       flex-direction: row;
+    }
+    .contact-main h1 {
+        font-size: 3rem;
+    }
+    .contact-content h2 {
+        font-size: 1.8rem;
+    }
+    .contact-content h3 {
+        font-size: 1.8rem;
+    }
+    .contact-content-form p {
+        font-size: 1.8rem;
+    }
+
+    .contact-content-form form {
+        width: 40%;
+    }
+    .contact-content-form form input, textarea {
+        padding: 20px;
+    }
+    .contact-content-form form button {
+        padding: 15px;
+        font-size: 2rem;
+    }
+    
+}
