@@ -28,7 +28,7 @@ useEffect(() => {
         } alt={`Organization Pictures  ${index + 1 }`} />
         <div className='image-overlay'>
           <p>
-            Empowering Youth Through Education, building better future together, and creating opportunities for growth.
+            Empowering Youth Through Education and building better future together.
           </p>
           <Link to="/about"><button className='btn' >Learn More</button></Link>
         </div>
@@ -36,7 +36,7 @@ useEffect(() => {
      
 
 			<div className='hero-content'>
-        <h1 style={{color: '#489EDE'}}>WELCOME TO</h1>
+        <h1 style={{color: '#489EDE', fontFamily: "'lobster', sans-serif"}}>WELCOME TO</h1>
         <h2>AL-RISALA ORGANIZATION</h2>
         <p> Is a non-profit organization that aims to provide a platform for the youth to develop their skills and talents in order to become the future leaders of the community.
         </p>

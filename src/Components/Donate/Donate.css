@@ -4,10 +4,10 @@
     display: flex;
     flex-wrap: wrap;
     box-shadow: 5px 6px 10px #00000020;
+    width: 80%;
 }
 
 .donate-content {
-    width: 80%;
     text-align: justify;
     display: flex;
     flex: 1;
@@ -44,7 +44,7 @@
 }
 
 .donate-content.two {
-    background-color: #6bbbe7;
+    background-color: #48bcfb;
 }
 
 .donate-content h2 {
@@ -52,6 +52,13 @@
     font-weight: 600;
     color: #fff;
     margin-bottom: 10px;
+}
+
+.donate-content p {
+    font-size: 16px;
+    padding-top: 10px;
+    font-weight: 500;
+    font-family: 'poppins', sans-serif;
 }
 
 .donate-btn {

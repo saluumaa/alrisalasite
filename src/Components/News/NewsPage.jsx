@@ -27,7 +27,7 @@ const NewsPage = () => {
         <img src={line} alt='line' /> 
       </div>
       <div className='news-header-text'>
-      <h1> Our Latest Programmes</h1>
+      <h1> OUR LATEST PROGRAMMES</h1>
       </div>
     </div>
     <div className='news-container'>
@@ -37,7 +37,7 @@ const NewsPage = () => {
             <img className='d-block w-100' src={item.image[0]} alt='news' />
             <Carousel.Caption>
               <h3>{item.title}</h3>
-              <p>{item.description.slice(0, 100)}</p>
+              <p>{item.description.slice(0, 50)}</p>
               <p>
                 <Link to={`/news/${item.id}`}><button>Read more</button></Link>
               </p>

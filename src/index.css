@@ -11,8 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'poppins', sans-serif;
-  /* background: #489EDE; */
+  font-family: 'roboto', sans-serif;
   background: #000;
   overflow-y: scroll;
 }

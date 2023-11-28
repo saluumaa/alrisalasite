@@ -8,7 +8,7 @@ nav {
     width: 50%;
     top: -100%;
     left: 0;
-    /* background-color: #000; */
+    background-color: #000;
     color: #489EDE;
     cursor: pointer;
     font-weight: 500;
@@ -29,14 +29,14 @@ nav.nav-active{
     padding: 10px;
     position: absolute;
     top: 5px;
-    right: 10px;
+    left:10px;
     z-index: 2;
   }
-
 
 .navbar-logo img {
     width: 70px;
     height: 60px;
+    margin-bottom: 20px;
 }
 
 .navbar-links {
@@ -45,7 +45,7 @@ nav.nav-active{
     align-items: center;
     list-style: none;
     font-size: 18px;
-    gap: 30px;
+    gap: 50px;
 }
 
 .navbar-links hr {
@@ -96,9 +96,12 @@ nav.nav-active{
         display: none;
     }
 
+    .navbar-logo img {
+        margin-bottom: 0;
+    }
+
     .navbar-links {
         flex-direction: row;
-        gap: 50px;
     }
 
     .login-btn button {

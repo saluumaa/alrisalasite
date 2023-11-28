@@ -17,15 +17,16 @@ const FullNews = () => {
     }
   return (
     <div className='news-page'>
+        <div className='news-content'>
+            <h3>{newsItem.title}</h3>
+            <p>{newsItem.description}</p>
+            <h5>Date: {newsItem.date}</h5>
+        </div>
+        {/* <p>here are some of the project images</p> */}
         <div className='news-image'>
             {newsItem.image.length > 0 && newsItem.image.map((img, index) => (
                 <img key={index} src={img} alt='news' />
             ))}
-        </div>
-        <div className='news-content'>
-            <h3>{newsItem.title}</h3>
-            <p>{newsItem.description}</p>
-            <p>{newsItem.date}</p>
         </div>
     </div>
   )

@@ -32,20 +32,20 @@ const News = ({loggedIn }) => {
 
   return (
    
-    <div className='news-page'>
+    <div className='news-page-frame'>
       {loggedIn && (
         <div className='add-delete-btn'>
        <Link to='/addnews'><button>Add News</button></Link>   
-          <button onClick={() => deleteNews(news.id)}>Delete News</button>
+        <button onClick={() => deleteNews(news.id)}>Delete News</button>
         </div>
         )}
      {news.map((item) => (
-       <>
+       <div className='news-wrapper'>
         <div key={item.id} className='slider' >
           <Slider {...settings}>
             {item.image.length > 0 &&
               item.image.map((img, index) => (
-                <img key={index} src={img} alt='news' />
+                <img key={index} src={img} alt='news' className='item-img' />
               ))}
           </Slider>
           </div>
@@ -54,7 +54,7 @@ const News = ({loggedIn }) => {
               <p>{item.description}</p>
               <p>{item.date}</p>
             </div>
-             </>
+            </div>
         ))}
     </div>
    

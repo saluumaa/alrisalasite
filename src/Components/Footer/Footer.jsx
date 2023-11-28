@@ -7,11 +7,15 @@ const Footer = () => {
 	<div className='footer-wrapper'>
     <div className='footer'>
       <div className='footer-logo'>
+				<div>
 				<img src={logo_background} alt='logo' />
+				</div>
+				<div>
 				<p>
 					Al-Risala Organization is a non-profit organization that focuses on education and social activities.
 					it was established in 2017 and has been active in various fields such as education, social, and religion.
 				</p>
+				</div>
 			</div>
 			<div className='footer-links links'>
 				<h2>WHO WE ARE</h2>

@@ -1,12 +1,22 @@
 import React from 'react'
 import './Service.css'
+import '../News/News.css'
+import line from '../Assets/line.png'
 import health_sector from '../Assets/health_section.jpg'
 
 const Service = () => {
   return (
     <div className='services'>
-      <h1>OUR SERVICES</h1> 
-        <hr />
+      {/* <h1>OUR SERVICES</h1> 
+        <hr /> */}
+      <div className='news-header service-header'>
+      <div className='news-header-img'>
+        <img src={line} alt='line' /> 
+      </div>
+      <div className='news-header-text'>
+      <h1> OUR SERVICES</h1>
+      </div>
+    </div>
       <div className='services-container'>
         <div className='services-content'>
           <div className='services-img'>
