@@ -46,8 +46,12 @@
 }
 
 .about-content:hover {
-  box-shadow: 0 0 5px #54f802, 0 0 5px #f3fde7, 0 0 3px #898EDE,
-  inset 0 0 2px #f1f2fc, 2px 0 2px #f8f8bd;
+  box-shadow:
+    0 0 5px #54f802,
+    0 0 5px #f3fde7,
+    0 0 3px #898ede,
+    inset 0 0 2px #f1f2fc,
+    2px 0 2px #f8f8bd;
 }
 
 .about-content h2 {
@@ -67,24 +71,24 @@
 }
 
 .about-content-main h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #898EDE;
-    text-align:left;
-    padding: 10px 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #898ede;
+  text-align: left;
+  padding: 10px 30px;
 }
 
 .about-content-main p {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    text-align: justify;
-    padding: 10px 30px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: justify;
+  padding: 10px 30px;
 }
 
-.about-content hr {
-    margin-top: -10px;
-}
+/* .about-content hr {
+  margin-top: -10px;
+} */
 
 @media screen and (min-width: 768px) {
   .about-content-main {
@@ -98,6 +102,4 @@
   .about-content-container {
     flex-direction: row;
   }
-
-  
 }

@@ -1,11 +1,11 @@
 .login-form {
-    width: 50%;
-    max-width: 330px;
-    padding: 15px;
-    margin:70px auto 20px auto;
+  width: 50%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 70px auto 20px auto;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

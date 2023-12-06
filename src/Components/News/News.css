@@ -34,16 +34,15 @@
   font-weight: 500;
 }
 
-
 .carousel {
-  height: 300px; 
-  width: 80%;   
-  margin: auto; 
+  height: 300px;
+  width: 80%;
+  margin: auto;
   position: relative;
 }
 
 .carousel-item {
-  text-align: center; 
+  text-align: center;
   height: 300px;
   border-radius: 40px;
 }
@@ -57,22 +56,21 @@
 .carousel-caption h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #489EDE;
+  color: #489ede;
 }
-
 
 .carousel-caption h3,
 .carousel-caption p,
 .carousel-caption a {
-  color: #fff; 
+  color: #fff;
 }
 
 .carousel-caption a {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 .carousel img {
-  object-fit: cover; 
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -98,6 +96,7 @@
 .news-page {
   display: flex;
   flex-direction: column;
+
   /* justify-content: center;
   align-items: center; */
   margin-top: 3rem;
@@ -111,11 +110,11 @@
 .news-content h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #489EDE;
+  color: #489ede;
   padding-bottom: 10px;
 }
 
- p {
+p {
   font-size: 1rem;
   font-weight: 400;
   text-align: justify;
@@ -126,7 +125,7 @@
   font-weight: 400;
   text-align: right;
   padding-top: -20px;
-  color: #489EDE;
+  color: #489ede;
 }
 
 .news-image {
@@ -154,16 +153,13 @@
   width: 70%;
   max-height: 350px !important;
   padding-left: 20px;
-  margin:20px auto;
-
+  margin: 20px auto;
 }
 
 .item-img {
   width: 40%;
   height: 300px;
-
 }
-
 
 @media screen and (min-width: 768px) {
   .carousel {
@@ -173,7 +169,7 @@
   .carousel-caption {
     opacity: 0;
     height: 100%;
-    width: 100%; 
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -181,14 +177,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease; 
+    transition: opacity 0.3s ease;
   }
-  
+
   .carousel-caption:hover {
-    opacity: 1; 
-    background-color: rgb(0,0,0,0.5);
+    opacity: 1;
+    background-color: rgb(0, 0, 0, 0.5);
   }
-  
+
   .news-header {
     margin-top: 13rem;
     display: flex;
@@ -207,20 +203,20 @@
   .news-header-img {
     display: block;
   }
-  
+
   .news-header-img img {
     width: 100%;
     max-height: 30%;
     margin-top: 28px;
-  }  
+  }
 
   .news-page {
     margin-top: 5rem;
   }
-  
+
   .news-content {
     padding: 5px 3rem;
-    margin: auto ;
+    margin: auto;
   }
 
   .news-wrapper {
@@ -249,7 +245,7 @@
   .carousel {
     width: 80%;
   }
-  
+
   .news-header {
     margin-top: 12rem;
     display: flex;
@@ -273,5 +269,4 @@
     width: 100%;
     max-height: 30%;
   }
-  
 }
