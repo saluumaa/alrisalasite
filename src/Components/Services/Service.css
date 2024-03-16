@@ -1,5 +1,5 @@
 .services {
-    color: #fff;
+    color: var(--body_color);
 }
 /* .services hr {
     width: 12%;
@@ -30,9 +30,9 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    color: #fff;
+    color: var(--body_color);
     text-align: center;
-    border: 2px solid #fff;
+    border: 2px solid var(--body_color);
     border-radius: 10px;
 }
 
@@ -42,7 +42,7 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    background: #489EDE;
+    background: var(--primary_color);
     border-radius: 10px;
 }
 
@@ -56,14 +56,14 @@
 .services-content h2 {
     font-size: 25px;
     font-weight: 600;
-    color: #489EDE;
+    color: var(--primary_color);
     margin-bottom: 10px;
 }
 
 .services-content p {
     font-size: 14px;
     font-weight: 400;
-    color: #fff;
+    color: var(--body_color);
     padding: 10px 20px;
     margin-bottom: 10px;
 }
@@ -71,7 +71,7 @@
 @media screen and (min-width: 768px) {
     .services {
         margin-top: -11rem;
-        color: #fff;
+        color: var(--body_color);
     }
     
     
