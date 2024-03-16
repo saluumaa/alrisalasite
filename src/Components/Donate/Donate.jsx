@@ -1,5 +1,6 @@
 import React from 'react'
 import './Donate.css'
+import { Link } from 'react-router-dom'
 
 const Donate = () => {
   return (
@@ -22,12 +23,13 @@ const Donate = () => {
                 <button className='btn donate-btn'>Donate</button>
             </div>
             <div className='donate-content three'>
-                <h2>Be a volunteer</h2>
-               
+                <h2>
+                    Be a volunteer
+                </h2>
                 <p>
                     Join our team and be a part of the change.
                 </p>
-                <button className='btn donate-btn vol-btn'>Volunteer</button>
+                <Link to='/volunteer'> <button className='btn donate-btn vol-btn'>Volunteer</button> </Link>
             </div>
         </div>
 
