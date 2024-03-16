@@ -1,33 +1,39 @@
 
-import React, {useContext} from 'react'
+import React from 'react'
 import {useParams} from 'react-router-dom'
-import { GlobalContext } from '../Context/GlobalState'
+import { useSelector } from 'react-redux'
 import './News.css'
 
 const FullNews = () => {
-    const {news} = useContext(GlobalContext);
+    const news = useSelector((state) => state.news.news);
     const {id} = useParams();
     const newsItem = news.find(news => news.id === parseInt(id));
 
-
     if(!newsItem){
         return <div className='not-found'>
-            <h3>News not found</h3>
+            <h3 style={{color: 'white', marginTop: '50px'}}
+            >News not found</h3>
         </div>
     }
   return (
-    <div className='news-page'>
-        <div className='news-content'>
+        <div className='news-page'>
+            <div className='news-content'>
             <h3>{newsItem.title}</h3>
-            <p>{newsItem.description}</p>
-            <h5>Date: {newsItem.date}</h5>
         </div>
-        {/* <p>here are some of the project images</p> */}
+        <span> enjoy some of images taken during the event. </span>
         <div className='news-image'>
-            {newsItem.image.length > 0 && newsItem.image.map((img, index) => (
-                <img key={index} src={img} alt='news' />
-            ))}
+        {newsItem.image_url && newsItem.image_url.map((imageUrl, index) => (
+            <img key={index} src={imageUrl} alt='news' className='news-item-img' />         
+        ))}     
+        </div>     
+        <div className="new-body-container">
+        <div className='news-body'>
+        <p>{newsItem.body}</p>
+       </div>
+         <div className='news-date'>
+          <p>{newsItem.date}</p>
         </div>
+        </div>  
     </div>
   )
 }
