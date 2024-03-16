@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import logo from '../Assets/logo_background.jpeg'
+import DarkMode from '../DarkMode/DarkMode'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -32,7 +33,11 @@ const Navbar = () => {
 					</li>
         </ul>
 
+       
         <div className='login-btn'>
+        <div className='dark-mode'>
+          <DarkMode />
+        </div>
         <Link to="/login"><button>Log in</button></Link>    
         </div>
     </nav>

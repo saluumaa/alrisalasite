@@ -8,8 +8,8 @@ nav {
     width: 50%;
     top: -100%;
     left: 0;
-    background-color: #000;
-    color: #489EDE;
+    background-color: var(--body_background);
+    color: var(--primary_color);
     cursor: pointer;
     font-weight: 500;
     gap: 30px;
@@ -25,7 +25,7 @@ nav.nav-active{
     display: block;
     font-size: 30px;
     cursor: pointer;
-    color: #fff;
+    color: var(--body_color);
     padding: 10px;
     position: absolute;
     top: 5px;
@@ -52,32 +52,32 @@ nav.nav-active{
     width: 40px;
     margin: auto;
     height:3px;
-    background-color: #fff;
+    background-color: var(--body_color);
     border: none;
     border-radius: 10px;
-    color: #fff;
+    color: var(--body_color);
 }
 
 .navbar-links li a {
-    color: #489EDE;
+    color: var(--primary_color);
     text-decoration: none;
 }
 
 .navbar-links li a:hover {
-    color: #fff;
-    background-color: #000;
+    color: var(--body_color);
+    background-color: var(--body_background);
     border-radius: 10px;
     padding: 5px 10px;
 }
 
 .login-btn button {
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid var(--body_color);
     border-radius: 15px;
     padding: 5px 15px;
     font-size: 19px;
     cursor: pointer;
-    color: #489EDE;
+    color: var(--primary_color);
     margin-top: 20px;
 }
 
@@ -90,6 +90,11 @@ nav.nav-active{
         height: 70px;
         width: 100%;
         top: 0;
+    }
+
+    .login-btn {
+        display: flex;
+        gap: 10px;
     }
 
     .humberger {
