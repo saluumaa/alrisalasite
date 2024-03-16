@@ -11,12 +11,11 @@
 .footer {
     display: flex;
     justify-content: space-evenly;
-    /* grid-template-columns: repeat(2, 1fr); */
     flex-wrap: wrap;
     gap: 30px;
     height: auto;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--body_background);
+    color: var(--body_color);
     padding: 20px;
     text-align: center;
     font-size: 12px;
@@ -41,13 +40,14 @@
 
 .footer-logo p {
     font-size: 16px;
-    color: #fff;
+    color: var(--body_color)
 }
+
 
 .links h2 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #489EDE;
+    color: var(--primary_color);
 }
 
 .links ul{
@@ -56,13 +56,18 @@
     padding: 15px 0;
 }
 
+.links ul a {
+    text-decoration: none;
+    color: var(--body_color);
+}
+
 .footer-credit {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--body_background);
+    color: var(--body_color);
     bottom: 0;
     left: 0;
     width: 100%;

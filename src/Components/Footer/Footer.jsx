@@ -20,17 +20,17 @@ const Footer = () => {
 			<div className='footer-links links'>
 				<h2>WHO WE ARE</h2>
 				<ul>
-					<li>Home</li>
-					<li>About Us</li>
-					<li>News</li>
+					<a href='/'><li>Home</li> </a>
+					<a href='/about'><li>About Us</li></a>
+					<a href='/news'><li>News</li></a>
 				</ul>
 			</div>
 			<div className='footer-social links'>
 				<h2>Follow Us</h2>
 				<ul>
-					<li>Facebook</li>
-					<li>Youtube</li>
-					<li>Instagram</li>
+					<a href='https://www.facebook.com'><li>Facebook</li></a>
+					<a href='youtube.com'><li>Youtube</li></a>
+					<a href='https://www.instagram.com'><li>Instagram</li></a>
 				</ul>
 			</div>
 			<div className='footer-contact links'>
