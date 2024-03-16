@@ -38,7 +38,7 @@ position: relative;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #00000070;
+    background-color: var(--body_background_2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,8 +57,8 @@ position: relative;
 }
 
 .image-overlay button {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--body_background);
+    color: var(--body_color);
     border: none;
     padding: 10px 25px;
     margin-top: 20px;
@@ -77,10 +77,10 @@ position: relative;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(3, 98, 181, 0.5) 80%, rgb(0, 0, 0, 0.7) 100%);
+        background: linear-gradient(90deg, var(--body_background) 100%, var(--body_color) 100%);
         border-bottom: 1px solid #fff;
         border-bottom-left-radius: 40px;
-        box-shadow: 0 0 10px #498EDE;
+        box-shadow: 0 0 10px var(--primary_color);
     }
     
     .hero-content {
@@ -91,7 +91,7 @@ position: relative;
         width: 50%;
         padding: 15px;
         margin: auto;
-        color: #fff;
+        color: var(--body_color);
     }
 
     .hero-content p {
@@ -105,7 +105,7 @@ position: relative;
 
     .hero-content button {
         background: transparent;
-        color: #fff;
+        color: var(--body_color);
         border: none;
         margin-top: 20px;
         font-size: 20px;
@@ -122,20 +122,20 @@ position: relative;
     }
 
     .social-icons a {
-        color: #fff;
+        color:var(--body_color);
         font-size: 20px;
     }
 
     .image-wrapper {
-        background: #000;
-        border: 1px solid #fff;
+        background: var(--body_background);
+        border: 1px solid var(--body_color);
         border-radius: 50%;
         right: 7%;
         bottom: 15%;
         width: 400px;
         height: 400px;
         margin: 10px auto 40px auto;
-        box-shadow: 10px 10px 8px #000;
+        box-shadow: 4px 3px 3px var(--body_color);
     }
 
     .image-wrapper img {
