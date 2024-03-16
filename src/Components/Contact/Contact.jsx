@@ -1,7 +1,28 @@
-import React from 'react'
+
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import contact_mail from '../Assets/mail_contact.jpeg'
 import './Contact.css'
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
   return (
     <div className='contact-container'>
       <div className='contact-main'>
@@ -14,7 +35,7 @@ const Contact = () => {
       <h2>Work Hours</h2>
         <h4 style={{fontSize: '1.4rem'}}
         >Saturday - Thursday</h4>
-        <p>9:00 AM - 5:00 PM</p>
+        <span>9:00 AM - 5:00 PM</span>
       </div>
       <hr />
 
@@ -27,22 +48,28 @@ const Contact = () => {
       <div className='contact-content'>
         <h2>Email</h2>
        <h3>
-          <p>alrisalaorg@gmail.com</p>
+       <p> <a href='mailto:  Alrisala580@gmail.com'>
+        Alrisala580@gmail.com
+         </a></p>
        </h3>
       </div>
       <hr />
       </div>
 
+      <article>
+      <h2><span>Get in</span> Touch</h2>
       <div className='contact-content-form'>
-        <p>you can always send us  message using this form</p>
-        <form>
-          <input type='text' placeholder='Full Name' />
+        {/* <div className='contact-content-image'>
+          <img src={contact_mail} alt='contact' />
+        </div> */}
+        <form ref={form} onSubmit={sendEmail}>
+          <input type='text' placeholder='Name' />
           <input type='email' placeholder='Email' />
-          <input type='text' placeholder='Phone' /> 
           <textarea placeholder='Message'></textarea>     
-          <button type='submit'>Send</button>
+          <button type='submit' value='Send'>Send</button>
         </form>
       </div> 
+      </article>
     </div>
   )
 }
