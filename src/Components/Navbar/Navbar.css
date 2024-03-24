@@ -12,31 +12,51 @@ nav {
     color: var(--primary_color);
     cursor: pointer;
     font-weight: 500;
-    gap: 30px;
+    /* gap: 30px; */
     align-items: center;
-    z-index: 1;
+    z-index: 5;
+}
+
+.top-nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border-bottom: 1px solid var(--body_color); */
+    width: 100%;
+    padding: 20px 0;
+    align-items: center;
+
 }
 
 nav.nav-active{
     top: 0;
+    transition: 0.5s;
 }
 
-.humberger {
+.login-dark-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hamburger {
     display: block;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
-    color: var(--body_color);
+    color: var(--primary_color);
     padding: 10px;
     position: absolute;
-    top: 5px;
+    top: 3px;
     left:10px;
-    z-index: 2;
+    z-index: 6;
   }
 
 .navbar-logo img {
-    width: 70px;
-    height: 60px;
-    margin-bottom: 20px;
+    width: 50px;
+    height: 40px;
+    /* margin-bottom: 20px; */
 }
 
 .navbar-links {
@@ -70,43 +90,60 @@ nav.nav-active{
     padding: 5px 10px;
 }
 
+
 .login-btn button {
     background-color: transparent;
-    border: 2px solid var(--body_color);
+    border: none;
     border-radius: 15px;
     padding: 5px 15px;
-    font-size: 19px;
+    font-size: 20px;
     cursor: pointer;
-    color: var(--primary_color);
+    color: var(--body_color);
     margin-top: 20px;
 }
 
 @media screen and (min-width: 768px) {
     nav {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
         padding: 0 50px;
-        height: 70px;
+        height: 40px;
         width: 100%;
         top: 0;
     }
 
-    .login-btn {
-        display: flex;
-        gap: 10px;
+    .top-nav-wrapper {
+        flex-direction: row; 
+        border-bottom: 1px solid var(--body_color);
+        width: 100vw;
+        height: 20vh;
+        padding: 1px 10px;
+        margin: 0;
     }
 
-    .humberger {
+    
+
+    .login-dark-mode {
+        flex-direction: row;
+        gap: 32px;
+        margin-top: 3rem;
+    }
+
+    .hamburger {
         display: none;
+        /* z-index: 0; */
     }
 
     .navbar-logo img {
-        margin-bottom: 0;
+        /* margin: 45px 0 0 0; */
+        margin-top: 3rem;
+        
     }
 
     .navbar-links {
         flex-direction: row;
+        font-size: 20px;
+        font-weight: 700;
+        gap: 35px;
+        z-index: 8;
     }
 
     .login-btn button {

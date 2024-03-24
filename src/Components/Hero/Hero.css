@@ -1,9 +1,13 @@
+
 .hero-wrapper {
 display: flex;
+/* margin-top: 10px; */
 flex-direction: column;
+align-items: center;
 position: relative;
-    
+width: 100%;
 }
+
 .hero {
     margin-top: 70px;
     display: flex;
@@ -15,64 +19,102 @@ position: relative;
 .image-wrapper img {
     width: 100%;
     height: 100%;
+    /* height: 50vh; */
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .image-wrapper {
     position: relative;
-}
+    width: 100%;
+    height: 650px;
+} 
 
-/* .image-wrapper::after {
+ .image-wrapper::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #00000080;
+    background-color: #00000070;
     width: 100%;
     height: 100%;
-} */
+    border-radius: 20px;
+}
+
 
 .image-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--body_background_2);
+    bottom: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
+    align-items: center;
+    background-color: var(--body_background_2);
+    color: var(--body_color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 1;
+  }
 
 .image-overlay P {
     color: #fff;
-    text-align: justify;
-    font-size: 16px;
+    text-align: center;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
-    padding: 0 30px;
-    width: 80%;
-    font-family: 'lobster', sans-serif
+    /* padding: 0 30px; */
+    /* width: 80%; */
+    font-family: 'lobster', sans-serif;
+    z-index: 1;
 }
 
 .image-overlay button {
     background-color: var(--body_background);
     color: var(--body_color);
     border: none;
-    padding: 10px 25px;
-    margin-top: 20px;
+    padding: 10px 30px;
+    /* margin-top: 20px; */
     border-radius: 5px;
     font-size: 18px;
     font-weight: 600;
+    z-index: 1;
     cursor: pointer;
+    flex-wrap: wrap;
 }
+
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+.social-icons a {
+    color: var(--primary_color);
+    margin: 0 8px;
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+  }
 
 .hero-content {
     display: none;
 }
 
 @media screen and (min-width: 768px) {
+    .hero-wrapper{
+        /* margin-top: 70px; */
+    }
+
     .hero {
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -96,11 +138,11 @@ position: relative;
 
     .hero-content p {
         font-size: 16px;
-        text-align: justify;
+        text-align: center;
         font-weight: 500;
         margin-bottom: 10px;
         padding: 10px 0; 
-        width: 70%;
+        /* width: 70%; */
     }
 
     .hero-content button {
@@ -113,49 +155,42 @@ position: relative;
         cursor: pointer;
     }
 
-    .social-icons {
-        display: flex;
-        margin-left: 5px;
-        gap: 20px;
-        width: 80%;
-        margin-top: 10px;
-    }
-
-    .social-icons a {
-        color:var(--body_color);
-        font-size: 20px;
-    }
+    
 
     .image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         background: var(--body_background);
         border: 1px solid var(--body_color);
-        border-radius: 50%;
-        right: 7%;
-        bottom: 15%;
-        width: 400px;
-        height: 400px;
+        border-radius: 20px;
+        width: 100%;
+        height: 650px;
         margin: 10px auto 40px auto;
-        box-shadow: 4px 3px 3px var(--body_color);
+        box-shadow: 0px 2px 1px var(--body_color);
     }
 
     .image-wrapper img {
-        width: 400px;
-        height: 400px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        border-radius: 50%;
     }
 
-    .image-overlay {
-       border-radius: 50%;
-       width: 400px;
-       height: 400px;
-    }
-/* 
     .image-overlay p {
         font-size: 18px;
         text-align: center;
-    } */
+    }
 
+    .social-icons {
+        flex-direction: row;
+    }
+}
 
+@media screen and (min-width: 1024px) {
+   .image-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 10px auto 40px auto;
+   }
 }
 
